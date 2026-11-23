@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>박수한 | Portfolio</title>
+  <meta name="description" content="박수한의 프로젝트, 경험, 기술 역량을 소개하는 포트폴리오 사이트">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#home" class="logo">박수한</a>
+      <nav>
+        <a href="#about">소개</a>
+        <a href="#projects">프로젝트</a>
+        <a href="#contact">연락처</a>
+        <a href="#guestbook">방명록</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- S01 Home -->
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow">Portfolio</p>
+          <h1>안녕하세요,<br><span class="accent">박수한</span>입니다.</h1>
+          <p class="lead">
+            직접 만들고 배포해 본 프로젝트로 역량을 증명하는 개발자를 목표로 합니다.
+            진행했던 프로젝트와 경험, 기술 스택을 한눈에 확인해 보세요.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">프로젝트 보기</a>
+            <a href="#contact" class="btn btn-ghost">연락하기</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <!-- 프로필 사진: assets/profile.jpg 를 넣고 아래 div를 <img src="assets/profile.jpg" alt="박수한 프로필 사진"> 로 교체 -->
+          <div class="avatar" aria-label="프로필 이미지">SH</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- S02 소개 -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">소개</h2>
+        <div class="about-grid">
+          <div class="card">
+            <h3>기본 정보</h3>
+            <dl class="info">
+              <dt>전공</dt><dd>컴퓨터공학 (수정)</dd>
+              <dt>관심 분야</dt><dd>클라우드, 백엔드, 데이터베이스</dd>
+              <dt>학력</dt><dd>강원대학교 재학 (2022 ~ )</dd>
+            </dl>
+          </div>
+          <div class="card">
+            <h3>기술 스택</h3>
+            <div class="stack-group">
+              <p class="stack-label">Language</p>
+              <ul class="tags"><li>Java</li><li>Python</li><li>JavaScript</li><li>SQL</li></ul>
+            </div>
+            <div class="stack-group">
+              <p class="stack-label">Frontend</p>
+              <ul class="tags"><li>HTML</li><li>CSS</li><li>React</li></ul>
+            </div>
+            <div class="stack-group">
+              <p class="stack-label">Backend / DB</p>
+              <ul class="tags"><li>Spring Boot</li><li>MySQL</li><li>DynamoDB</li></ul>
+            </div>
+            <div class="stack-group">
+              <p class="stack-label">Cloud / DevOps</p>
+              <ul class="tags"><li>AWS S3</li><li>CloudFront</li><li>Lambda</li><li>API Gateway</li><li>GitHub Actions</li></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- S03 프로젝트 -->
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">프로젝트</h2>
+        <p class="section-desc">최신순 정렬 · 카드의 "자세히 보기"를 누르면 상세 내용을 볼 수 있습니다.</p>
+        <div id="project-list" class="project-grid"></div>
+        <div class="center">
+          <button id="more-btn" class="btn btn-ghost" hidden>더보기</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- S04 연락처 -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">연락처</h2>
+        <div class="contact-grid">
+          <a class="card contact-card" href="mailto:soohanpark9@gmail.com">
+            <span class="contact-icon">✉</span>
+            <span>
+              <strong>Email</strong>
+              <span class="muted">soohanpark9@gmail.com</span>
+            </span>
+          </a>
+          <a class="card contact-card" href="https://github.com/" target="_blank" rel="noopener">
+            <span class="contact-icon">⌥</span>
+            <span>
+              <strong>GitHub</strong>
+              <span class="muted">github.com/아이디 (수정)</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- S05 방명록 -->
+    <section id="guestbook" class="section section-alt">
+      <div class="container narrow">
+        <h2 class="section-title">방명록</h2>
+        <form id="guestbook-form" class="card gb-form" action="#" onsubmit="return false;">
+          <label>
+            이름
+            <input type="text" name="name" maxlength="20" placeholder="이름 (최대 20자)">
+          </label>
+          <label>
+            내용
+            <textarea name="content" maxlength="200" rows="3" placeholder="내용 (최대 200자)"></textarea>
+          </label>
+          <div class="gb-actions">
+            <span class="muted small">※ 방명록 등록 기능은 준비 중입니다.</span>
+            <button type="submit" class="btn btn-primary" disabled>등록</button>
+          </div>
+        </form>
+        <ul class="gb-list">
+          <li class="card gb-item">
+            <div class="gb-head"><strong>홍길동</strong><span class="muted small">2026-11-20 14:02</span></div>
+            <p>포트폴리오 잘 봤습니다. 프로젝트 정리가 깔끔하네요!</p>
+          </li>
+          <li class="card gb-item">
+            <div class="gb-head"><strong>김강원</strong><span class="muted small">2026-11-18 09:41</span></div>
+            <p>클라우드 아키텍처 구성이 인상적입니다. 응원합니다.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© 2026 박수한 · Hosted on AWS S3</div>
+  </footer>
+
+  <!-- 프로젝트 상세 모달 -->
+  <div id="modal" class="modal" hidden>
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" aria-label="닫기">×</button>
+      <h3 id="modal-title"></h3>
+      <dl class="info" id="modal-body"></dl>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

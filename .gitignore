@@ -1,0 +1,40 @@
+# ===== 개인정보 문서 =====
+# 기획서 (학번·이름 포함)
+*.docx
+*.pdf
+*.hwp
+
+# ===== AWS 자격 증명 / 설정 =====
+.aws/
+credentials
+*.pem
+*.key
+*.crt
+*accessKeys*.csv
+*_credentials.csv
+*.tfstate
+*.tfstate.*
+.terraform/
+cdk.out/
+samconfig.toml
+.aws-sam/
+
+# ===== 환경 변수 / 시크릿 =====
+.env
+.env.*
+!.env.example
+secrets.json
+config.local.*
+
+# ===== Lambda 빌드 산출물 =====
+*.zip
+node_modules/
+__pycache__/
+*.pyc
+
+# ===== OS / 에디터 =====
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
